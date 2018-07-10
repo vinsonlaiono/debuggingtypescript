@@ -3,7 +3,7 @@ var myString: string;
 // I can assign myString like this:
 myString = "Bee stinger";
 // Why is there a problem with this? What can I do to fix this?
-myString = "9";
+myString = "9"; // put quotes to make 9 a string
 
 //================ 2. Setting the types for function paramters ==============
 function sayHello(name: string){
@@ -12,10 +12,11 @@ function sayHello(name: string){
 // This is working great:
 console.log(sayHello("Kermit"));
 // Why isn't this working? I want it to return "Hello, 9!"
-console.log(sayHello('9'));
+console.log(sayHello('9')); // same as number 1
 
 //================ 3. Optional parameters ==============
 function fullName(firstName: string, lastName: string, middleName?: string){
+    // add ? after middleName to make it optional
     if(middleName){
         let fullName = `${firstName} ${middleName} ${lastName}`;
         return fullName;
@@ -27,7 +28,7 @@ function fullName(firstName: string, lastName: string, middleName?: string){
 // This works:
 console.log(fullName("Mary", "Moore", "Tyler"));
 // What do I do if someone doesn't have a middle name?
-console.log(fullName("Jimbo", "Jones", ""));  
+console.log(fullName("Jimbo", "Jones"));  
 
 //================ 4. Interfaces and function parameters ==============
 interface Student {
